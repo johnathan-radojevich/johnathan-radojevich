@@ -1,8 +1,4 @@
-<picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="header-dark.jpg">
-    <source media="(prefers-color-scheme: light)" srcset="header-light.jpg">
-    <img alt="an alternate image of the" src="header-dark.jpg">
-</picture>
+<img src="header-anim.gif" alt="Gray-Scott reaction-diffusion simulation — a spatiotemporal self-organizing system" width="100%">
 <hr>
 <h1>I'm Johnathan Radojevich 👋 I model physical systems across time and space, all the way down to risk.</h1>
 <!-- Scientific Computing -->
