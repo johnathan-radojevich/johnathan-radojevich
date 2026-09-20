@@ -1,70 +1,93 @@
 """
-Generates an animated GIF header using overlapping wave interference patterns.
-Produces a wide banner (800x200) suitable for a GitHub README.
+Generates an animated GIF header using the Barkley excitable-medium model —
+the reaction-diffusion system underpinning spatial epidemic wave propagation.
+
+  u (activator / infected)   → red-orange
+  v (inhibitor / recovered)  → blue-teal
+  rest (susceptible)         → dark navy background
+
+Produces a wide banner (800×200) suitable for a GitHub README.
 """
 import numpy as np
 from PIL import Image
 import os
 
 W, H = 800, 200
-FRAMES = 48
-DURATION = 60  # ms per frame (~16 fps)
+FRAMES = 60
+DURATION = 80  # ms per frame
 
-x = np.linspace(0, 4 * np.pi, W)
-y = np.linspace(0, 2 * np.pi, H)
-X, Y = np.meshgrid(x, y)
-
-# Wave source positions (as fractions of the domain)
-sources = [
-    (0.15, 0.25),
-    (0.50, 0.80),
-    (0.80, 0.20),
-    (0.35, 0.60),
-    (0.70, 0.55),
-]
-SX = [sx * 4 * np.pi for sx, _ in sources]
-SY = [sy * 2 * np.pi for _, sy in sources]
+# Barkley model parameters — tuned for clean rotating spiral waves
+a = 0.75
+b = 0.06
+eps = 0.02
+D_u = 1.0   # infected diffuse; recovered/susceptible do not
+dt = 0.08
+WARMUP = 3000
+STEPS_PER_FRAME = 12
 
 
-def make_field(t):
-    val = np.zeros((H, W))
-    for cx, cy in zip(SX, SY):
-        r = np.hypot(X - cx, Y - cy)
-        val += np.sin(r * 2.8 - t)
-    val /= len(sources)
-    return (val + 1.0) / 2.0  # [0, 1]
+def reaction_u(u, v):
+    return (1.0 / eps) * u * (1.0 - u) * (u - (v + b) / a)
 
 
-def colormap(arr):
-    """Blue-cyan-purple palette via HSV interpolation."""
-    h = 0.54 + arr * 0.32   # cyan (0.54) → purple (0.86)
-    s = 0.85 * np.ones_like(arr)
-    v = 0.25 + arr * 0.75
+def lap2d(u):
+    return (
+        np.roll(u, 1, 0) + np.roll(u, -1, 0) +
+        np.roll(u, 1, 1) + np.roll(u, -1, 1) - 4.0 * u
+    )
 
-    h6 = h * 6.0
-    i = h6.astype(int) % 6
-    f = h6 - np.floor(h6)
-    p = v * (1.0 - s)
-    q = v * (1.0 - s * f)
-    t_ = v * (1.0 - s * (1.0 - f))
 
-    r = np.choose(i, [v, q, p, p, t_, v])
-    g = np.choose(i, [t_, v, v, q, p, p])
-    b = np.choose(i, [p, p, t_, v, v, q])
+def step(u, v):
+    u_new = u + dt * (D_u * lap2d(u) + reaction_u(u, v))
+    v_new = v + dt * (u - v)
+    return np.clip(u_new, 0.0, 1.0), np.clip(v_new, 0.0, 1.0)
 
-    rgb = np.stack([r, g, b], axis=-1)
+
+def colorize(u, v):
+    # Susceptible: dark navy   Infected: hot red-orange   Recovered: cool blue
+    r_ch = u * 0.92 + v * 0.04 + (1 - u - v) * 0.02
+    g_ch = u * 0.22 + v * 0.30 + (1 - u - v) * 0.04
+    b_ch = u * 0.05 + v * 0.88 + (1 - u - v) * 0.10
+    rgb = np.stack([r_ch, g_ch, b_ch], axis=-1)
     return (np.clip(rgb, 0.0, 1.0) * 255).astype(np.uint8)
 
+
+# Initialise near the quiescent state, then plant broken-wave-front seeds
+# so that free spiral ends roll up into self-sustaining rotors.
+np.random.seed(17)
+u = np.zeros((H, W))
+v = np.zeros((H, W))
+
+seed_xs = [100, 260, 420, 580, 720]
+seed_ys = [H // 2 - 20, H // 2 + 25, H // 2 - 30, H // 2 + 20, H // 2 - 15]
+radii_i = [9, 11, 10, 9, 10]
+radii_r = [18, 20, 19, 18, 19]
+orientations = [0.3, -0.4, 0.5, -0.3, 0.4]  # break angle (radians)
+
+ys, xs = np.ogrid[:H, :W]
+for cx, cy, ri, ro, phi in zip(seed_xs, seed_ys, radii_i, radii_r, orientations):
+    r   = np.sqrt((xs - cx) ** 2 + (ys - cy) ** 2)
+    ang = np.arctan2(ys - cy, xs - cx)
+    # half-annulus broken wave → free end → spiral
+    mask_u = (r < ri)  & (ang > phi)
+    mask_v = (r >= ri) & (r < ro) & (ang > phi)
+    u[mask_u] = 1.0
+    v[mask_v] = 0.6
+
+print("Warming up simulation…")
+for k in range(WARMUP):
+    u, v = step(u, v)
+    if k % 500 == 0:
+        print(f"  {k}/{WARMUP}", end="\r", flush=True)
+print()
 
 print("Generating frames…")
 frames = []
 for i in range(FRAMES):
-    t = i * 2 * np.pi / FRAMES
-    arr = make_field(t)
-    rgb = colormap(arr)
-    frames.append(Image.fromarray(rgb, mode="RGB"))
+    for _ in range(STEPS_PER_FRAME):
+        u, v = step(u, v)
+    frames.append(Image.fromarray(colorize(u, v), "RGB"))
     print(f"  frame {i + 1}/{FRAMES}", end="\r", flush=True)
-
 print()
 
 out = os.path.join(os.path.dirname(__file__), "header-anim.gif")

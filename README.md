@@ -1,4 +1,4 @@
-<img src="header-anim.gif" alt="Gray-Scott reaction-diffusion simulation — a spatiotemporal self-organizing system" width="100%">
+<img src="header-anim.gif" alt="Barkley excitable-medium simulation — spiral epidemic wave fronts propagating through a susceptible population" width="100%">
 <hr>
 <h1>I'm Johnathan Radojevich 👋 I model physical systems across time and space, all the way down to risk.</h1>
 <!-- Scientific Computing -->
