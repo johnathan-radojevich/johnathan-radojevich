@@ -133,24 +133,24 @@
 </picture>
 <h3>💼 Software Engineer</h3>
 <blockquote>
-The sense of accomplishment that I derive from software development is unparalleled. To me, there's a unique satisfaction in seeing individual lines of code form into a functioning piece of software. It's a feeling of creative expression and problem-solving that I haven’t been able to find anywhere else.
+Shipping software to millions of users taught me that the hardest part is never the code — it’s the model of the problem. That realization eventually pulled me toward domains where the model <em>is</em> the point: climate, epidemics, physical systems that don’t wait for a hotfix.
 </blockquote>
 <hr>
 <p>
-    I have more than 5 years of experience defining requirements and designing, implementing, testing, and delivering complex web applications that have served millions of users and delivered over $7 billion in revenue, across a variety of programming languages and technologies. I am also a certified Scrum Master, Product Owner, and Developer.
+    Over five years in production engineering, I’ve designed and shipped systems used by millions of people and processed over $7 billion in revenue. The work spans full-stack web applications, distributed systems, and the data infrastructure behind them — in whatever language the problem calls for. I’m also a certified Scrum Master, Product Owner, and Developer.
 </p>
 <p>
-    If you'd like to get in contact, you can reach me on <a href="https://www.linkedin.com/in/johnathan-radojevich/?skipRedirect=true">LinkedIn.</a>
+    If you’d like to get in contact, you can reach me on <a href="https://www.linkedin.com/in/johnathan-radojevich/?skipRedirect=true">LinkedIn.</a>
 </p>
-<h3>👨‍🎓 Computational Modeling of Spatial-Temporal Systems</h3>
+<h3>👨‍🎓 Computational Modeling of Spatiotemporal Systems</h3>
 <p>
-    Many of the most consequential systems in the natural world aren’t static — they evolve through space and time. Weather, climate, watersheds, ocean circulation, and biological populations all exhibit this dynamic behavior. The geospatial dimension is fundamental: these aren’t simulations in abstract coordinates, but physical fields evolving across real terrain, shaped by geography, topography, and human movement.
-</p>
-<p>
-    I became particularly drawn to infectious disease through this lens. Disease transmission is itself a dynamic spatial system — pathogens move through populations and environments while climate, geography, and human mobility shape where and when outbreaks occur. Modeling these systems well requires the mathematical depth to describe dynamic behavior and the spatial literacy to anchor it in real geography.
+    The systems I care most about can’t be reasoned about at a single point in space or time. Disease doesn’t spread <em>at</em> a location — it propagates across a geography. Temperature doesn’t change <em>at</em> a sensor — it evolves across a field. The model has to be spatiotemporal, or it’s missing the phenomenon entirely.
 </p>
 <p>
-    I’m working toward this through a deliberate sequence of graduate programs:
+    Infectious disease pulled me in hardest. Transmission is a dynamic spatial process: pathogens move through populations shaped by climate, terrain, and human mobility — and the difference between a contained outbreak and a pandemic is often a question of where and when, not just whether. Capturing that requires both the mathematical depth to describe wave-like propagation and the spatial literacy to anchor it in real geography.
+</p>
+<p>
+    I’m building toward this through a deliberate sequence of graduate programs:
 </p>
 <table>
     <thead>
@@ -175,10 +175,10 @@ The sense of accomplishment that I derive from software development is unparalle
     </tbody>
 </table>
 <p>
-    From this foundation, I plan to specialize in one or more applied physical domains — epidemiology, meteorology, or climate risk — depending on where the research leads.
+    From this foundation, I plan to specialize in one or more applied domains — epidemiology, meteorology, or climate risk — depending on where the research leads. The sequencing is deliberate: computational depth first, mathematical rigor second, spatial grounding third.
 </p>
 <p>
-    I’ve also begun building <a href="https://acidex.io">Acidex</a>. Acidex is an infrastructure layer for building digestive health applications that are grounded in chemistry and physiology.
+    I’ve also begun building <a href="https://acidex.io">Acidex</a> — an infrastructure layer for digestive health applications grounded in chemistry and physiology, not just symptom tracking.
 </p>
 <picture>
     <source media="(prefers-color-scheme: light)" srcset="logo_light.png">
@@ -187,12 +187,9 @@ The sense of accomplishment that I derive from software development is unparalle
 </picture>
 <h3>❄️ Nix Enthusiast</h3>
 <p>
-    I’m deeply interested in the Nix ecosystem as both a technical platform and a broader model for reproducible computing. What draws me to Nix is its ability to formalize environments declaratively and make software systems genuinely reproducible across time, machines, and deployment contexts. I’m particularly interested in the theoretical and practical implications of functional package management — immutability, referential transparency, deterministic builds, and composable system definitions — and how these ideas can improve the reliability of modern infrastructure and research computing.
+    Nix is the only package manager I’ve used that takes reproducibility seriously as a design goal rather than a feature. Immutable derivations, referential transparency, deterministic builds — these aren’t niceties, they’re what it actually means to know what software you’re running. That matters everywhere, but it matters most in biological and healthcare computing, where long-lived pipelines and heterogeneous toolchains make "works on my machine" a genuine research liability. A result you can’t reproduce isn’t a result.
 </p>
 <p>
-I’m especially interested in the application of Nix to biological and healthcare computing domains, where reproducibility is not merely a convenience but a foundational requirement. Bioinformatics and healthcare workflows frequently involve heterogeneous toolchains, tightly coupled dependencies, and long-lived computational pipelines that are difficult to preserve or reproduce over time. I believe that Nix offers a compelling framework for addressing these problems by enabling declarative, versioned, and isolated computational environments that can be reconstructed with precision across research teams and infrastructure boundaries.
-</p>
-<p>
-I'm currently using Nix to reproduce my personal development environment between various machines. I prefer to use MacOS as my primary OS, and NixOS within a VM, as my primary development environment. I use graphical applications on the host (Safari, Calendar, iMessage, etc.), but I prefer to do almost everything development-related in the VM (editor, compilation, etc.). If you'd like to check out my configuration, you can <a href="https://github.com/johnathan-radojevich/nome">here.</a>
+    My personal setup uses MacOS as the host for graphical applications (Safari, Calendar, iMessage) with NixOS in a VM handling almost everything development-related — editor, compilation, tooling. If you’d like to check out the configuration, it’s <a href="https://github.com/johnathan-radojevich/nome">here.</a>
 </p>
 <hr>
