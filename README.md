@@ -178,7 +178,7 @@ Shipping software to millions of users taught me that the hardest part is never 
     From this foundation, I plan to specialize in one or more applied domains epidemiology, meteorology, or climate risk depending on where the research leads. The sequencing is deliberate: computational depth first, mathematical rigor second, spatial grounding third.
 </p>
 <p>
-    I’ve also begun building <a href="https://acidex.io">Acidex</a> an infrastructure layer for digestive health applications grounded in chemistry and physiology, not just symptom tracking.
+    I’ve also begun building <a href="https://acidex.com">Acidex</a> an infrastructure layer for digestive health applications grounded in chemistry and physiology, not just symptom tracking.
 </p>
 <picture>
     <source media="(prefers-color-scheme: light)" srcset="logo_light.png">
