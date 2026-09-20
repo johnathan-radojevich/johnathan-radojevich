@@ -4,7 +4,7 @@
     <img alt="an alternate image of the" src="header-dark.jpg">
 </picture>
 <hr>
-<h1>I'm Johnathan Radojevich 👋 I love to code. I love creating impact.</h1>
+<h1>I'm Johnathan Radojevich 👋 I build software. I model complex systems.</h1>
 <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/-HTML-000000?style=flat-square&logo=htmx">
     <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-HTML-0e1117?style=flat-square&logo=htmx">
@@ -120,6 +120,16 @@
     <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-Vim-0e1117?style=flat-square&logo=vim">
     <img alt="an alternate image of the" src="header-dark.jpg">
 </picture>
+<picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/-Julia-000000?style=flat-square&logo=julia">
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-Julia-0e1117?style=flat-square&logo=julia">
+    <img alt="Julia" src="https://img.shields.io/badge/-Julia-0e1117?style=flat-square&logo=julia">
+</picture>
+<picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/-SciPy-000000?style=flat-square&logo=scipy">
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/-SciPy-0e1117?style=flat-square&logo=scipy">
+    <img alt="SciPy" src="https://img.shields.io/badge/-SciPy-0e1117?style=flat-square&logo=scipy">
+</picture>
 <hr>
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg">
@@ -132,16 +142,45 @@ The sense of accomplishment that I derive from software development is unparalle
 </blockquote>
 <hr>
 <p>
-    I have more than 5 years of experience of defining requirements and designing, implementing, testing and delivering complex web applications that have served millions of users, and delivered over $7 billion in revenue, using a variety of programming languages and technologies. I am also a certified Scrum Master, Product Owner, and Developer.
-</p>
-    I'm actively interested in remote opportunities within healthcare technology. If you'd like to get in contact with me, you can <a href="https://www.linkedin.com/in/johnathan-radojevich/?skipRedirect=true">here.</a>
-</p>
-<h3>👨‍🎓 Forever Student: Currently @ <a href='https://uwm.edu'>UWM</a></h3>
-<p>
-    I’ve always been a lifelong learner, and the constant evolution of software engineering is one of the main reasons I was drawn to the field. Technology never stands still—there’s always a new framework to explore, a better design pattern to understand, or a more efficient way to solve problems. That continuous cycle of learning and improvement keeps me engaged and motivated. I enjoy the challenge of adapting to new technologies, expanding my skill set, and finding opportunities to grow both technically and professionally. For me, software engineering is more than just writing code; it’s a field that rewards curiosity, creativity, and a mindset of continuous learning.
+    I have more than 5 years of experience defining requirements and designing, implementing, testing, and delivering complex web applications that have served millions of users and delivered over $7 billion in revenue, across a variety of programming languages and technologies. I am also a certified Scrum Master, Product Owner, and Developer.
 </p>
 <p>
-    Following a recent struggle with my own health, I’ve developed a strong interest in the intersection of computer science and medicine. Experiencing the healthcare system from a personal perspective gave me a deeper appreciation for how critical technology can be in improving patient outcomes, accessibility, and quality of care. It also opened my eyes to the many challenges that still exist within healthcare—whether it’s fragmented systems, inefficient workflows, limited access to information, or the difficulty patients face when navigating complex medical processes. I'm currently taking healthcare-related classes at the University of Wisconsin - Milwaukee to develop the foundational knowledge needed to help bridge the gap. 
+    If you'd like to get in contact, you can reach me on <a href="https://www.linkedin.com/in/johnathan-radojevich/?skipRedirect=true">LinkedIn.</a>
+</p>
+<h3>👨‍🎓 Computational Modeling of Spatial-Temporal Systems</h3>
+<p>
+    Many of the most consequential systems in the natural world aren’t static — they evolve through space and time. Weather, climate, watersheds, ocean circulation, and biological populations all exhibit this dynamic behavior. The geospatial dimension is fundamental: these aren’t simulations in abstract coordinates, but physical fields evolving across real terrain, shaped by geography, topography, and human movement.
+</p>
+<p>
+    I became particularly drawn to infectious disease through this lens. Disease transmission is itself a dynamic spatial system — pathogens move through populations and environments while climate, geography, and human mobility shape where and when outbreaks occur. Modeling these systems well requires the mathematical depth to describe dynamic behavior and the spatial literacy to anchor it in real geography.
+</p>
+<p>
+    I’m working toward this through a deliberate sequence of graduate programs:
+</p>
+<table>
+    <thead>
+        <tr><th>Stage</th><th>Program</th><th>Institution</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Computational Background</td>
+            <td>M.S. Computer Science <em>(Computing Systems)</em></td>
+            <td>Georgia Tech</td>
+        </tr>
+        <tr>
+            <td>Mathematical Background</td>
+            <td>M.S. Applied &amp; Computational Mathematics</td>
+            <td>University of Washington</td>
+        </tr>
+        <tr>
+            <td>Spatial Computation</td>
+            <td>M.S. CyberGIS &amp; Geospatial Data Science</td>
+            <td>University of Illinois Urbana-Champaign</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    From this foundation, I plan to specialize in one or more applied physical domains — epidemiology, meteorology, or climate risk — depending on where the research leads.
 </p>
 <p>
     I’ve also begun building <a href="https://acidex.io">Acidex</a>. Acidex is an infrastructure layer for building digestive health applications that are grounded in chemistry and physiology.
