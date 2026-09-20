@@ -1,4 +1,4 @@
-<img src="header-anim.gif" alt="Barkley excitable-medium simulation — spiral epidemic wave fronts propagating through a susceptible population" width="100%">
+<img src="header-anim.gif" alt="Barkley excitable-medium simulation spiral epidemic wave fronts propagating through a susceptible population" width="100%">
 <hr>
 <h1>I'm Johnathan Radojevich 👋 I model physical systems across time and space, all the way down to risk.</h1>
 <!-- Scientific Computing -->
@@ -133,21 +133,21 @@
 </picture>
 <h3>💼 Software Engineer</h3>
 <blockquote>
-Shipping software to millions of users taught me that the hardest part is never the code — it’s the model of the problem. That realization eventually pulled me toward domains where the model <em>is</em> the point: climate, epidemics, physical systems that don’t wait for a hotfix.
+Shipping software to millions of users taught me that the hardest part is never the code it’s the model of the problem. That realization eventually pulled me toward domains where the model <em>is</em> the point: climate, epidemics, physical systems that don’t wait for a hotfix.
 </blockquote>
 <hr>
 <p>
-    Over five years in production engineering, I’ve designed and shipped systems used by millions of people and processed over $7 billion in revenue. The work spans full-stack web applications, distributed systems, and the data infrastructure behind them — in whatever language the problem calls for. I’m also a certified Scrum Master, Product Owner, and Developer.
+    Over five years in production engineering, I’ve designed and shipped systems used by millions of people and processed over $7 billion in revenue. The work spans full-stack web applications, distributed systems, and the data infrastructure behind them in whatever language the problem calls for. I’m also a certified Scrum Master, Product Owner, and Developer.
 </p>
 <p>
     If you’d like to get in contact, you can reach me on <a href="https://www.linkedin.com/in/johnathan-radojevich/?skipRedirect=true">LinkedIn.</a>
 </p>
 <h3>👨‍🎓 Computational Modeling of Spatiotemporal Systems</h3>
 <p>
-    The systems I care most about can’t be reasoned about at a single point in space or time. Disease doesn’t spread <em>at</em> a location — it propagates across a geography. Temperature doesn’t change <em>at</em> a sensor — it evolves across a field. The model has to be spatiotemporal, or it’s missing the phenomenon entirely.
+    The systems I care most about can’t be reasoned about at a single point in space or time. Disease doesn’t spread <em>at</em> a location it propagates across a geography. Temperature doesn’t change <em>at</em> a sensor it evolves across a field. The model has to be spatiotemporal, or it’s missing the phenomenon entirely.
 </p>
 <p>
-    Infectious disease pulled me in hardest. Transmission is a dynamic spatial process: pathogens move through populations shaped by climate, terrain, and human mobility — and the difference between a contained outbreak and a pandemic is often a question of where and when, not just whether. Capturing that requires both the mathematical depth to describe wave-like propagation and the spatial literacy to anchor it in real geography.
+    Infectious disease pulled me in hardest. Transmission is a dynamic spatial process: pathogens move through populations shaped by climate, terrain, and human mobility and the difference between a contained outbreak and a pandemic is often a question of where and when, not just whether. Capturing that requires both the mathematical depth to describe wave-like propagation and the spatial literacy to anchor it in real geography.
 </p>
 <p>
     I’m building toward this through a deliberate sequence of graduate programs:
@@ -175,10 +175,10 @@ Shipping software to millions of users taught me that the hardest part is never 
     </tbody>
 </table>
 <p>
-    From this foundation, I plan to specialize in one or more applied domains — epidemiology, meteorology, or climate risk — depending on where the research leads. The sequencing is deliberate: computational depth first, mathematical rigor second, spatial grounding third.
+    From this foundation, I plan to specialize in one or more applied domains epidemiology, meteorology, or climate risk depending on where the research leads. The sequencing is deliberate: computational depth first, mathematical rigor second, spatial grounding third.
 </p>
 <p>
-    I’ve also begun building <a href="https://acidex.io">Acidex</a> — an infrastructure layer for digestive health applications grounded in chemistry and physiology, not just symptom tracking.
+    I’ve also begun building <a href="https://acidex.io">Acidex</a> an infrastructure layer for digestive health applications grounded in chemistry and physiology, not just symptom tracking.
 </p>
 <picture>
     <source media="(prefers-color-scheme: light)" srcset="logo_light.png">
@@ -187,9 +187,9 @@ Shipping software to millions of users taught me that the hardest part is never 
 </picture>
 <h3>❄️ Nix Enthusiast</h3>
 <p>
-    Nix is the only package manager I’ve used that takes reproducibility seriously as a design goal rather than a feature. Immutable derivations, referential transparency, deterministic builds — these aren’t niceties, they’re what it actually means to know what software you’re running. That matters everywhere, but it matters most in biological and healthcare computing, where long-lived pipelines and heterogeneous toolchains make "works on my machine" a genuine research liability. A result you can’t reproduce isn’t a result.
+    Nix is the only package manager I’ve used that takes reproducibility seriously as a design goal rather than a feature. Immutable derivations, referential transparency, deterministic builds these aren’t niceties, they’re what it actually means to know what software you’re running. That matters everywhere, but it matters most in biological and healthcare computing, where long-lived pipelines and heterogeneous toolchains make "works on my machine" a genuine research liability. A result you can’t reproduce isn’t a result.
 </p>
 <p>
-    My personal setup uses MacOS as the host for graphical applications (Safari, Calendar, iMessage) with NixOS in a VM handling almost everything development-related — editor, compilation, tooling. If you’d like to check out the configuration, it’s <a href="https://github.com/johnathan-radojevich/nome">here.</a>
+    My personal setup uses MacOS as the host for graphical applications (Safari, Calendar, iMessage) with NixOS in a VM handling almost everything development-related editor, compilation, tooling. If you’d like to check out the configuration, it’s <a href="https://github.com/johnathan-radojevich/nome">here.</a>
 </p>
 <hr>
