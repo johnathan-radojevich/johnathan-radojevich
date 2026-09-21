@@ -139,9 +139,6 @@ Shipping software to millions of users taught me that the hardest part is never 
 <p>
     Over five years in production engineering, I’ve designed and shipped systems used by millions of people and processed over $7 billion in revenue. The work spans full-stack web applications, distributed systems, and the data infrastructure behind them in whatever language the problem calls for. I’m also a certified Scrum Master, Product Owner, and Developer.
 </p>
-<p>
-    If you’d like to get in contact, you can reach me on <a href="https://www.linkedin.com/in/johnathan-radojevich/?skipRedirect=true">LinkedIn.</a>
-</p>
 <h3>👨‍🎓 Computational Modeling of Spatiotemporal Systems</h3>
 <p>
     The systems I care most about can’t be reasoned about at a single point in space or time. Disease doesn’t spread <em>at</em> a location it propagates across a geography. Temperature doesn’t change <em>at</em> a sensor it evolves across a field. The model has to be spatiotemporal, or it’s missing the phenomenon entirely.
